@@ -1,0 +1,5 @@
+http://localhost:3000/usuarios
+
+###
+delete http://localhost:3000/usuarios/3 HTTP/1.1
+content-type: application/json
