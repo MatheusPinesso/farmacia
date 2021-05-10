@@ -1,0 +1,25 @@
+<body>
+
+
+    <div id='divForm'>
+        <img id="imgLogo" src="/assets/undraw_mobile_login_ikmv.svg" alt="Logo">
+
+        <div style='padding: 1em;'>
+            <span  class="p-float-label">
+                <input style=' width:20vw;' id="float-input" type="email" pInputText>
+                <label id="texto" for="float-input">Email</label>
+            </span>
+        </div>
+
+        <div style='padding: 1em;'>
+            <span class="p-float-label">
+                <input style=' width:20vw;' id="float-input" type="password" pInputText>
+                <label id="texto" for="float-input">Senha</label>
+            </span>
+        </div>
+        <div style='padding: 1em;'>
+            <button style=' width:15vw;' [routerLink]="['/mainscreen']" routerLinkActive="router-link-active" id="botao" pButton
+                type="button" class="p-button-raised p-button-rounded" label="Entrar"></button>
+        </div>
+    </div>
+</body>

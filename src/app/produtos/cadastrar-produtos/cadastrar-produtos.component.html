@@ -1,0 +1,41 @@
+<body>
+    
+    <form class="needs-validation" novalidate [formGroup]='form'>
+           <div id='divForm' class="p-fluid p-grid" >
+               <div id="divImage">
+            <img id="image" src="/assets/undraw_product_photography_91i2.svg" alt="logo"> 
+              </div>
+            <p-toast></p-toast>
+            <p-toast position="top-left" key="tl"></p-toast>
+            <div style='padding: 0.8em;  width: 25vw;'>
+                <span class="p-float-label" >
+                    <input formControlName="nome"  id="float-input" type="text" pInputText>
+                    <label id="texto" for="float-input">Nome</label>
+                </span>
+            </div>
+    
+            <div style='padding: 0.8em;  width: 20vw;'>
+                <span class="p-float-label">
+                    <input formControlName="preco" id="float-input" type="text" pInputText>
+                    <label  id="texto" for="float-input">Preço</label>
+                </span>
+            </div>
+    
+            <div style='padding: 0.8em;'>
+                <span class="p-float-label">
+                    <input formControlName="tipo"  id="float-input" type="" pInputText>
+                    <label id="texto" for="float-input">Categoria</label>
+                </span>
+            </div>
+    
+            <div style='padding: 0.4em;width: 20vw; '>
+                <button  (click)="onSubmit()" id="botao" pButton type="button"
+                    class="p-button-raised p-button-rounded" label="Cadastrar"></button>
+            </div>
+            <div style='width: 10vw; '>
+                <button (click)="cancel()" id="botao" pButton type="button" class="p-button-rounded p-button-danger"
+                    label="Cancelar"></button>
+            </div>
+        </div>
+    </form>
+    </body>

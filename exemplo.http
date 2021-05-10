@@ -1,5 +1,5 @@
-http://localhost:3000/usuarios
+http://localhost:3001/produtos
 
 ###
-delete http://localhost:3000/usuarios/3 HTTP/1.1
+delete http://localhost:3001/produtos HTTP/1.1
 content-type: application/json

@@ -1,0 +1,61 @@
+
+<body>
+
+    <div class="card"> 
+
+        <p-table id="tabela" [value]="usuarios" styleClass="p-datatable-lg" [resizableColumns]="true" styleClass="p-datatable-gridlines" *ngIf="usuarios ; else loading">
+        <ng-template pTemplate="caption">
+           Tabela de Usuários
+           <button style="right: 15pt; position:absolute; " [routerLink]="['/cadastro']" routerLinkActive="router-link-active"  pButton type="button" class="p-button-raised p-button-rounded"> Criar novo usuário</button>
+           <app-menu></app-menu>  
+        </ng-template>
+        <ng-template  pTemplate="header"  >
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template  pTemplate="body" let-usuario>
+            <tr class="resultados">
+            <td >{{ usuario.nome }}</td>
+            <td>{{ usuario.telefone }}</td>
+            <td>{{ usuario.endereco }}</td>
+            <td>{{ usuario.cpf }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.senha }}</td>
+            <td><div style="display:flex;">
+
+                <div style="padding:1.2em;">
+                    <button style="padding:1.5em;" routerLink="/editar-usuarios/{{usuario.id}}" pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success"></button>
+                </div>
+
+                <div style="padding:1.2em;">
+                 <button   pButton pRipple type="button" style="padding:1.5em;" icon="pi pi-times" class="p-button-rounded p-button-danger"></button>
+                </div>
+                 </div>
+                </td> 
+            </tr>
+           
+        </ng-template>
+        
+
+       
+    </p-table>
+    <div style="padding: 0.5em; font-weight: 350; text-align:center; color:rgb(0, 0, 0); background-color: #5cafeb;" *ngIf="usuarios ; " class="p-d-flex p-ai-center p-jc-between">
+            No total são {{usuarios ? usuarios.length : 0 }} usuarios.
+        </div> 
+    
+</div>
+<div id="divSpinner">
+<ng-template  #loading>
+        <p-progressSpinner strokeWidth="2" fill="transparent" animationDuration=".8s"></p-progressSpinner>
+    </ng-template> 
+    </div>
+    
+</body>
+

@@ -1,0 +1,65 @@
+{
+  "usuarios": [
+    {
+      "nome": "Asdadads",
+      "telefone": "231231222",
+      "endereco": "21312",
+      "cpf": "30213123912",
+      "email": "sdadas@g",
+      "senha": "adsdasadasd",
+      "id": 1
+    },
+    {
+      "nome": "dasasddasads",
+      "telefone": "sdasads222",
+      "endereco": "1231231",
+      "cpf": "asdassad231",
+      "email": "sdasd@g",
+      "senha": "asdasdsad",
+      "id": 2
+    },
+    {
+      "nome": "adsadasdads",
+      "telefone": "212312312",
+      "endereco": "123123rfaa",
+      "cpf": "asda2356756",
+      "email": "daasd@gg",
+      "senha": "adsasddas",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nome": "Rodrigo arantes do nascimento",
+      "telefone": "1231231231",
+      "endereco": "Rua dowlotr alejaus junio,2 33",
+      "cpf": "31231221312",
+      "email": "Matheus.pinesso@biosistemico.com",
+      "senha": "dsadsadas"
+    },
+    {
+      "id": 5,
+      "nome": "dsaasdasd",
+      "telefone": "s2131231211",
+      "endereco": "213123",
+      "cpf": "21312321312",
+      "email": "sdasd@gasas",
+      "senha": "asdasdasd"
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Deucepan",
+      "preco": 20,
+      "tipo": "DorDeCabeca",
+      "image": "undraw_mobile_login_ikmv",
+      "id": 1
+    },
+    {
+      "nome": "Roacutan",
+      "preco": "180",
+      "tipo": "Estetica",
+      "image": null,
+      "id": 2
+    }
+  ]
+}

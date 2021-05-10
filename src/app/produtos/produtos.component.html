@@ -1,0 +1,62 @@
+<body>
+    
+<div class="card" *ngIf="produtos ; else loading">
+    <p-dataView #dv [value]="produtos" [paginator]="true" [rows]="5" filterBy="name"
+        [sortField]="sortField" [sortOrder]="sortOrder" layout="grid" >
+        <ng-template pTemplate="header">
+            <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+                <div style="padding: 1em;">
+                <p-dropdown  [options]="sortOptions" placeholder="Filtrar por Preço" (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+            </div>
+                <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+            </div>
+        </ng-template>
+        <ng-template let-produto pTemplate="listItem">
+            <div class="p-col-12">
+                
+                <div class="product-list-item">
+                 <img id="img" src="/assets/undraw_secure_login_pdn4.svg" alt="product.name"/>   
+                    <div class="product-list-detail">
+                        <div class="product-name">{{produto.nome}}</div>
+                        <div class="product-description">{{produto.preco}}</div>
+                        <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{produto.tipo}}</span>
+                    </div>
+                    <div class="product-list-action">
+                        <p-button icon="pi pi-shopping-cart" label="Adicionar ao Carrinho"></p-button>
+
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template let-produto pTemplate="gridItem">
+            <div class="p-col-12 p-md-4">
+                <div class="product-grid-item card">
+                    <div class="product-grid-item-top">
+                        <div>
+                            <i class="pi pi-tag product-category-icon"></i>
+                            <span class="product-category">{{produto.tipo}}</span>
+                        </div>
+                    </div>
+                    <div class="product-grid-item-content">
+                        <div class="product-name">{{produto.nome}}</div>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                        <span class="product-price">${{produto.preco}}</span>
+                        <p-button icon="pi pi-shopping-cart" ></p-button>
+                    </div>
+                </div>
+                
+            </div>
+            <app-menu></app-menu> 
+        </ng-template>
+       
+    </p-dataView>
+    
+    </div>
+      
+</body>
+<div id="divSpinner">
+            <ng-template  #loading>
+                    <p-progressSpinner strokeWidth="2" fill="transparent" animationDuration=".8s"></p-progressSpinner>
+                </ng-template> 
+                </div>

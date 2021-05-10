@@ -1,0 +1,57 @@
+<body>
+    <form  [formGroup]='form'>
+        <div id='divForm' class="p-fluid p-grid">
+            <div style='padding: 0.8em;  width: 25vw;'>
+                <span >
+                    <input formControlName="nome" id="float-input" type="text" pInputText>
+                    <label id="texto" for="float-input">Nome Completo</label>
+                </span>
+            </div>
+
+            <div style='padding: 0.8em;  width: 20vw;'>
+                <span >
+                    <input formControlName="endereco" id="float-input" type="text" pInputText>
+                    <label id="texto" for="float-input">Endereço</label>
+                </span>
+            </div>
+
+            <div style='padding: 0.8em;'>
+                <span >
+                    <input formControlName="telefone" id="float-input" type="" pInputText>
+                    <label id="texto" for="float-input">Telefone</label>
+                </span>
+            </div>
+
+            <div style='padding: 0.8em;'>
+                <span >
+                    <input formControlName="cpf" id="float-input" type="text" pInputText>
+                    <label id="texto" for="float-input">CPF</label>
+                </span>
+            </div>
+
+            <div style='padding: 0.8em;  width: 20vw;'>
+                <span >
+                    <input formControlName="email" id="float-input" type="text" pInputText>
+                    <label id="texto" for="float-input">Email</label>
+                </span>
+            </div>
+
+            <div style='padding: 0.8em; width: 25vw;'>
+                <span >
+                    <input formControlName="senha" id="float-input" type="password" pInputText>
+                    <label id="texto" for="float-input">Senha</label>
+                </span>
+            </div>
+
+            <div>
+                <div style='width: 20vw; '>
+                <button (click)="update()" id="botao" pButton type="button" class="p-button-raised p-button-rounded"
+                    label="Cadastrar"></button></div>
+            <div style='padding: 0.8em;width: 20vw; '>
+                <button  (click)="cancel()" id="botao" pButton type="button" class="p-button-rounded p-button-danger"
+                    label="Cancelar"></button>
+            </div>        
+            </div>
+        </div>
+    </form>
+</body>
